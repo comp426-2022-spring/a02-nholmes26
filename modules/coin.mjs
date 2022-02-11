@@ -18,9 +18,9 @@ export function coinFlip() {
   var result;
   var x = Math.floor(Math.random() * 2); //generate a 1 or a 0 to represent Heads or Tails
   if (x == 1) {
-    result = "Heads";
+    result = "heads";
   } else {
-    result = "Tails";
+    result = "tails";
   }
   return result;
 }
