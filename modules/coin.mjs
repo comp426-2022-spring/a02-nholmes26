@@ -65,8 +65,23 @@ export function coinFlips(flips) {
  * @returns {{ heads: number, tails: number }}
  */
 
-function countFlips(array) {
-
+export function countFlips(array) {
+  var heads_c = 0;
+  var tails_c = 0;
+  for (const flip in array) {
+    if (flip == 'heads') {
+      heads++;
+    } else {
+      tails++;
+    }
+  }
+  if (heads == 0) {
+    return {heads: heads_c}
+  } else if (tails == 0) {
+    return {tails: tails_c}
+  } else {
+    return {heads: heads_c, tails: tails_c}
+  }
 }
 
 /** Flip a coin!
@@ -80,8 +95,12 @@ function countFlips(array) {
  * returns: { call: 'tails', flip: 'heads', result: 'lose' }
  */
 
-function flipACoin(call) {
-
+export function flipACoin(call) {
+  if (call == coinFlip()) {
+    return { call: call, flip: coinFlip(), result: 'win' }
+  } else {
+    return { call: call, flip: coinFlip(), result: 'lose' }
+  }
 }
 
 
