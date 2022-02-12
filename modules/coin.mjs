@@ -15,14 +15,12 @@
  */
 
 export function coinFlip() {
-  var result;
   var x = Math.floor(Math.random() * 2); //generate a 1 or a 0 to represent Heads or Tails
   if (x == 1) {
-    result = 'heads';
+    return 'heads';
   } else {
-    result = 'tails';
+    return 'tails';
   }
-  return result;
 }
 
 /** Multiple coin flips
@@ -76,9 +74,9 @@ export function countFlips(array) {
     }
   }
   if (heads_c == 0) {
-    return {heads: heads_c}
-  } else if (tails_c == 0) {
     return {tails: tails_c}
+  } else if (tails_c == 0) {
+    return {heads: heads_c}
   } else {
     return {heads: heads_c, tails: tails_c}
   }
