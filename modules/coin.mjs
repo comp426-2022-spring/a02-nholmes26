@@ -15,7 +15,14 @@
  */
 
 export function coinFlip() {
-  return (Math.floor(Math.random() * 2) == 0) ? 'heads' : 'tails';
+  var result;
+  var x = Math.floor(Math.random() * 2); //generate a 1 or a 0 to represent Heads or Tails
+  if (x == 1) {
+    result = 'heads';
+  } else {
+    result = 'tails';
+  }
+  return result;
 }
 
 /** Multiple coin flips
@@ -38,7 +45,7 @@ export function coinFlip() {
  */
 
 export function coinFlips(flips) {
-  const results = [];
+  var results = [];
   for (let i = 0; i < flips; i++) {
     results.push(coinFlip());//coinFlip done 'flips' number of times, result added to array
   }
