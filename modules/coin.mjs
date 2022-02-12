@@ -47,7 +47,7 @@ export function coinFlip() {
 export function coinFlips(flips) {
   const results = [];
   for (let i = 0; i < flips; i++) {
-    results.push(coinFlip);//coinFlip done 'flips' number of times, result added to array
+    results.push(coinFlip());//coinFlip done 'flips' number of times, result added to array
   }
   return results;
 }
