@@ -68,16 +68,16 @@ export function coinFlips(flips) {
 export function countFlips(array) {
   var heads_c = 0;
   var tails_c = 0;
-  for (const flip in array) {
+  for (var flip of array) {
     if (flip == 'heads') {
-      heads++;
-    } else {
-      tails++;
+      heads_c++;
+    } else if (flip == 'tails') {
+      tails_c++;
     }
   }
-  if (heads == 0) {
+  if (heads_c == 0) {
     return {heads: heads_c}
-  } else if (tails == 0) {
+  } else if (tails_c == 0) {
     return {tails: tails_c}
   } else {
     return {heads: heads_c, tails: tails_c}
