@@ -44,10 +44,10 @@ export function coinFlip() {
     ]
  */
 
-function coinFlips(flips) {
+export function coinFlips(flips) {
   const results = [];
   for (let i = 0; i < flips; i++) {
-    results.push(coinFlip);//coinFlip done 'flips' number of times
+    results.push(coinFlip);//coinFlip done 'flips' number of times, result added to array
   }
   return results;
 }
